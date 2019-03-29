@@ -1,0 +1,39 @@
+{
+	"manifest_version": 2,
+	"name": "掘金阅读模式-xiaoke4869",
+	"version": "1.0.0",
+	"description": "__MSG_pluginDesc__",
+	"icons":
+	{
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "掘金阅读模式-xiaoke4869",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["js/jquery-1.8.3.js"],
+			"run_at": "document_start"
+		}
+	],
+	"permissions":
+	[
+		"contextMenus",
+		"tabs", 
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+	],
+	"homepage_url": "https://github.com/xiaoke4869",
+	"default_locale": "zh_CN"
+}
